@@ -1,0 +1,65 @@
+/* Fondo general */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+h2 { text-align: center; margin-bottom: 20px; color: #333; }
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px auto auto;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+}
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+button:not(.editar):not(.eliminar):not(.cancelar):not(.icon-btn) {
+  background: #1976d2;
+}
+.cancelar { background: #757575; }
+table { width: 100%; border-collapse: collapse; }
+thead { background: #1976d2; color: white; }
+th, td { padding: 12px; text-align: center; }
+tbody tr { border-bottom: 1px solid #eee; }
+.editando { background: #e3f2fd !important; }
+.vacio { text-align: center; color: #888; margin-top: 10px; }
+.icon-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #ccc; color: white;
+}
+.editar { background: #ffa000; }
+.eliminar { background: #d32f2f; }
+.container {
+  max-width: 900px;
+}
+
+input {
+  transition: all 0.3s;
+}
+
+input:hover {
+  border-color: #1976d2;
+}
+
+button {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}

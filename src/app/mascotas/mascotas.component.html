@@ -1,0 +1,54 @@
+<div class="layout">
+
+  <header>
+    <h1>Gestión de Mascotas</h1>
+  </header>
+
+  <section class="panel">
+
+    <!-- FORMULARIO -->
+    <div class="formulario">
+      <h2>Registrar Mascota</h2>
+
+      <input [(ngModel)]="nombre" placeholder="Nombre">
+      <input [(ngModel)]="especie" placeholder="Especie">
+      <input [(ngModel)]="edad" placeholder="Edad">
+      <input [(ngModel)]="imagen" placeholder="URL de imagen">
+
+      <div class="botones">
+        <button class="guardar" (click)="guardar()">Guardar</button>
+        <button class="limpiar" (click)="limpiar()">Limpiar</button>
+      </div>
+
+      <p class="mensaje" *ngIf="mensaje">{{mensaje}}</p>
+    </div>
+
+    <!-- LISTADO -->
+    <div class="listado">
+
+      <div class="top">
+        <h2>Lista de Mascotas</h2>
+        <input [(ngModel)]="busqueda" placeholder="Buscar...">
+      </div>
+
+      <div class="cards">
+        <div class="card" *ngFor="let m of mascotasFiltradas; let i = index">
+
+          <img [src]="m.imagen">
+
+          <div class="info">
+            <h3>{{m.nombre}}</h3>
+            <p>{{m.especie}}</p>
+            <span>{{m.edad}} años</span>
+          </div>
+
+          <button class="eliminar" (click)="eliminar(i)">Eliminar</button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
